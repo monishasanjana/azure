@@ -13,8 +13,9 @@
 				"folderPath": "project/output",
 				"fileSystem": "testcontainer"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
