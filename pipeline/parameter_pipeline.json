@@ -1,6 +1,38 @@
 {
 	"name": "parameter_pipeline",
 	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"enableStaging": false
+				}
+			}
+		],
+		"parameters": {
+			"pipeline_container": {
+				"type": "string"
+			},
+			"pipeline_inpuDir": {
+				"type": "string"
+			},
+			"pipeline_outputDir": {
+				"type": "string"
+			},
+			"pipeline_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
