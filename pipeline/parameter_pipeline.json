@@ -69,8 +69,22 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "parameter_output1sink",
-						"type": "DatasetReference"
+						"referenceName": "parameter_dataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"dataset_container": {
+								"value": "@pipeline().parameters.pipeline_container",
+								"type": "Expression"
+							},
+							"dataset_directry": {
+								"value": "@pipeline().parameters.pipeline_outputDir",
+								"type": "Expression"
+							},
+							"datset_filename": {
+								"value": "@pipeline().parameters.pipeline_filename",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
