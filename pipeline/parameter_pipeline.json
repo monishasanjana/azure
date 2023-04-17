@@ -101,8 +101,39 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "parameter_dataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"dataset_container": {
+								"value": "@pipeline().parameters.pipeline_container",
+								"type": "Expression"
+							},
+							"dataset_directry": {
+								"value": "@pipeline().parameters.pipeline_outputDir",
+								"type": "Expression"
+							},
+							"datset_filename": {
+								"value": "@pipeline().parameters.pipeline_filename",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
@@ -116,6 +147,9 @@
 				"type": "string"
 			},
 			"pipeline_filename": {
+				"type": "string"
+			},
+			"pipeline_archiveDir": {
 				"type": "string"
 			}
 		},
