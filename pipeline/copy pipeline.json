@@ -132,7 +132,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "secnew_Delimited",
+						"referenceName": "sinkDelimited",
 						"type": "DatasetReference"
 					},
 					"enableLogging": false,
