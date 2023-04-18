@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"meta_finename": {
+			"meta_sink_finename": {
 				"type": "string"
 			}
 		},
