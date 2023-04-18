@@ -116,6 +116,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"metadata_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
