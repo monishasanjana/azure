@@ -102,13 +102,25 @@
 							"inputs": [
 								{
 									"referenceName": "metadata_source",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"meta_filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "metadata_sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"meta_sink_finename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -116,11 +128,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"metadata_filename": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
