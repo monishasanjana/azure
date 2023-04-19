@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "meta project/metaoutput",
+				"folderPath": "meta project/metaoutput/sales",
 				"fileSystem": "metadatacontainer"
 			},
 			"columnDelimiter": ",",
