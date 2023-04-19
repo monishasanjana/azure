@@ -205,7 +205,14 @@
 						{
 							"name": "Delete1",
 							"type": "Delete",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "Copy data2",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -215,7 +222,22 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableLogging": true
+								"dataset": {
+									"referenceName": "metadata_sink2",
+									"type": "DatasetReference",
+									"parameters": {
+										"meta_sink2_filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								},
+								"enableLogging": false,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
 							}
 						}
 					]
