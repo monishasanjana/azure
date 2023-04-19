@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().meta_sinkfor_if_filename",
+					"type": "Expression"
+				},
 				"folderPath": "meta project/Metainput",
 				"fileSystem": "metadatacontainer"
 			},
