@@ -223,10 +223,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "metadata_sink2",
+									"referenceName": "metadata_sink",
 									"type": "DatasetReference",
 									"parameters": {
-										"meta_sink2_filename": {
+										"meta_sink_finename": {
 											"value": "@item().name",
 											"type": "Expression"
 										}
