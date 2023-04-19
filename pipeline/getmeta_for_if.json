@@ -61,7 +61,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@item().name.startswith(\"master\")",
+									"value": "@item().name(startswith(\"master\"))",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
