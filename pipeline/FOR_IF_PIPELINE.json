@@ -172,7 +172,13 @@
 										"inputs": [
 											{
 												"referenceName": "FOR_IF_dataset",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"sourcefilename": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
