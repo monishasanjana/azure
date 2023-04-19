@@ -10,10 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().mata_for_if_filename",
-					"type": "Expression"
-				},
 				"folderPath": "meta project/Metainput",
 				"fileSystem": "metadatacontainer"
 			},
