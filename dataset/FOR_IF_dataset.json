@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().SourceFilename",
+					"type": "Expression"
+				},
 				"folderPath": "meta project/Metainput",
 				"fileSystem": "metadatacontainer"
 			},
