@@ -124,7 +124,13 @@
 										"outputs": [
 											{
 												"referenceName": "sink2",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"sink2filename": {
+														"value": "@activity('Get Metadata1').output.childItems",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
