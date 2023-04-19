@@ -112,13 +112,7 @@
 										"inputs": [
 											{
 												"referenceName": "FOR_IF_dataset",
-												"type": "DatasetReference",
-												"parameters": {
-													"SourceFilename": {
-														"value": "@activity('Get Metadata1').output.childItems",
-														"type": "Expression"
-													}
-												}
+												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
@@ -184,13 +178,7 @@
 										"inputs": [
 											{
 												"referenceName": "FOR_IF_dataset",
-												"type": "DatasetReference",
-												"parameters": {
-													"SourceFilename": {
-														"value": "@activity('Get Metadata1').output.childItems",
-														"type": "Expression"
-													}
-												}
+												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
