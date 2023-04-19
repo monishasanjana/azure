@@ -15,10 +15,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().meta_sink2_filename",
+					"type": "Expression"
+				},
 				"folderPath": "meta project/metaarchieve",
 				"fileSystem": "metadatacontainer"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
