@@ -178,7 +178,13 @@
 										"inputs": [
 											{
 												"referenceName": "metdataset_for_if",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"metadata_source_filename": {
+														"value": "@activity('Metadata_for_if').output.childItems",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
