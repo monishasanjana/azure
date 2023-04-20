@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "dataset_main",
+						"referenceName": "dataset_sub",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
