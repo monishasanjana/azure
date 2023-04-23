@@ -6,31 +6,37 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "dataflow_source_dataset",
+						"referenceName": "source_dataflow",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "select1"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          {ProductID     Name     ProductNumber     Color     StandardCost     ListPrice     Size     Weight     ProductCategoryID     ProductModelID     SellStartDate     SellEndDate     DiscontinuedDate     ThumbNailPhoto     ThumbnailPhotoFileName     rowguid     ModifiedDate} as string",
+				"          ProductID as string,",
+				"          Name as string,",
+				"          ProductNumber as string,",
+				"          Color as string,",
+				"          StandardCost as string,",
+				"          ListPrice as string,",
+				"          Size as string,",
+				"          Weight as string,",
+				"          ProductCategoryID as string,",
+				"          ProductModelID as string,",
+				"          SellStartDate as string,",
+				"          SellEndDate as string,",
+				"          DiscontinuedDate as string,",
+				"          ThumbNailPhoto as string,",
+				"          ThumbnailPhotoFileName as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: true,",
-				"     inferDriftedColumnTypes: true,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 select(mapColumn(",
-				"          {ProductID     Name     ProductNumber     Color     StandardCost     ListPrice     Size     Weight     ProductCategoryID     ProductModelID     SellStartDate     SellEndDate     DiscontinuedDate     ThumbNailPhoto     ThumbnailPhotoFileName     rowguid     ModifiedDate}",
-				"     ),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
 			]
 		}
 	}
