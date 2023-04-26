@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "zip_Metadata",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -31,6 +31,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"modifiedDatetimeStart": "2023-04-26T00:00:00.000Z",
 						"enablePartitionDiscovery": false
 					},
