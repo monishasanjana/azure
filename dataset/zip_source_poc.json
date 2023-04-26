@@ -1,0 +1,31 @@
+{
+	"name": "zip_source_poc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Zip file.zip",
+				"folderPath": "meta project/Metainput",
+				"fileSystem": "metadatacontainer"
+			},
+			"columnDelimiter": "\t",
+			"compressionCodec": "ZipDeflate",
+			"compressionLevel": "Optimal",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000\u000f�|V-�#�\u0001\\\u0001\u0000�\u0007\u0003\u0000\u0013\u0000\u0000\u0000SalesLTCustomer.txt��Y��J�&��^Eꥥ66�\bD`\b���\u0010\u00188�3M/ \u0000� A�\u0004�q7z�5�̤\u0005i\u000b� \t�s+��e�����*D��O����������8�Y����Y�8{��B�4",
+				"type": "String"
+			}
+		]
+	}
+}
