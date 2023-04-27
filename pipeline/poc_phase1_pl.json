@@ -130,7 +130,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@endswith(item().name,'product','customer')",
+									"value": "@endswith(item().name,'Product')",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
