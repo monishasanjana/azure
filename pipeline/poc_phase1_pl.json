@@ -60,7 +60,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "zip_sink_poc",
+						"referenceName": "sink_main_update",
 						"type": "DatasetReference"
 					}
 				]
@@ -86,7 +86,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "zip_sink_poc",
+						"referenceName": "sink_main_update",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
