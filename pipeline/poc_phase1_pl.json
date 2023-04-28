@@ -131,7 +131,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@startswith(item().name,'Sales')",
+									"value": "@endswith(item().name,'Address')",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
