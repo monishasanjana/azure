@@ -98,6 +98,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -130,7 +131,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@endswith(item().name,'Product')",
+									"value": "@startswith(item().name,'Sales')",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
