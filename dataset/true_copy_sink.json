@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "meta project/metaoutput/poc_output",
-				"fileSystem": "metadatacontainer"
+				"folderPath": "project/output/poc_output_phase1",
+				"fileSystem": "testcontainer"
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
