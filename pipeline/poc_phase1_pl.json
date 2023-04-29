@@ -131,7 +131,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@endswith(item().name,'Product.txt')",
+									"value": "@or(endswith(item().name,'Product.txt'),endswith(item().name,'Customer.txt'))",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
