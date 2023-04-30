@@ -190,7 +190,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "final_sink",
+												"referenceName": "finalsink_false",
 												"type": "DatasetReference"
 											}
 										]
