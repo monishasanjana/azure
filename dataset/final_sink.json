@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "meta project/metaoutput/not_pro_cust_out",
+				"folderPath": "meta project/metaoutput/pro_cust_out",
 				"fileSystem": "metadatacontainer"
 			},
 			"columnDelimiter": "\t",
