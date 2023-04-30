@@ -60,7 +60,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "zipsink",
+						"referenceName": "zipsink_update",
 						"type": "DatasetReference"
 					}
 				]
@@ -86,7 +86,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "zipsink",
+						"referenceName": "zipsink_update",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
