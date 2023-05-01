@@ -1,0 +1,62 @@
+{
+	"name": "Poc_phase2",
+	"properties": {
+		"activities": [
+			{
+				"name": "unzip_phase2",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings",
+								"preserveZipFileNameAsFolder": false
+							}
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "unzip_source",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"parameters": {
+			"container_dir": {
+				"type": "string"
+			},
+			"input_dir": {
+				"type": "string"
+			},
+			"output_dir": {
+				"type": "string"
+			},
+			"filename_dir": {
+				"type": "string"
+			},
+			"unzip_dir": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
