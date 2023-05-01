@@ -84,10 +84,6 @@
 							"sink_diectory": {
 								"value": "@pipeline().parameters.output_dir",
 								"type": "Expression"
-							},
-							"sink_filename": {
-								"value": "@pipeline().parameters.unzip_dir",
-								"type": "Expression"
 							}
 						}
 					}
@@ -105,9 +101,6 @@
 				"type": "string"
 			},
 			"filename_dir": {
-				"type": "string"
-			},
-			"unzip_dir": {
 				"type": "string"
 			}
 		},
