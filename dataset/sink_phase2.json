@@ -11,9 +11,6 @@
 			},
 			"sink_diectory": {
 				"type": "string"
-			},
-			"sink_filename": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
