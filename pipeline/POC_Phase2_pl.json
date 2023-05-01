@@ -66,6 +66,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"Path": {
+				"type": "string",
+				"defaultValue": "metadatacontainer/meta project/metaoutput/phase2_zipout"
+			}
+		},
 		"annotations": []
 	}
 }
