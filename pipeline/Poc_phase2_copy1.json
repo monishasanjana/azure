@@ -138,6 +138,19 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
 		"parameters": {
@@ -152,6 +165,11 @@
 			},
 			"filename_dir": {
 				"type": "string"
+			}
+		},
+		"variables": {
+			"Filecount": {
+				"type": "String"
 			}
 		},
 		"annotations": []
