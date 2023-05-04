@@ -171,9 +171,14 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"notebookPath": "/Users/kavishpranav@outlook.com/phase2_poc",
 								"baseParameters": {
 									"Filename": {
 										"value": "@item().name",
+										"type": "Expression"
+									},
+									"Path": {
+										"value": "@pipeline().parameters.output_dir",
 										"type": "Expression"
 									}
 								}
