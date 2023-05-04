@@ -174,7 +174,7 @@
 								"notebookPath": "/Users/kavishpranav@outlook.com/phase2_poc",
 								"baseParameters": {
 									"Filename": {
-										"value": "@item().name",
+										"value": "@substring(item().name,7,30)",
 										"type": "Expression"
 									},
 									"Path": {
