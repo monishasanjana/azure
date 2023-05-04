@@ -178,7 +178,7 @@
 										"type": "Expression"
 									},
 									"Path": {
-										"value": "@pipeline().parameters.output_dir",
+										"value": "@concat('/mnt/sanjana_meta_adls/',pipeline().parameters.output_dir)",
 										"type": "Expression"
 									}
 								}
