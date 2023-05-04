@@ -1,0 +1,159 @@
+{
+	"name": "Poc_phase2_copy1",
+	"properties": {
+		"activities": [
+			{
+				"name": "unzip_phase2",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings",
+								"preserveZipFileNameAsFolder": false
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "PreserveHierarchy"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "unzip_source",
+						"type": "DatasetReference",
+						"parameters": {
+							"source_system": {
+								"value": "@pipeline().parameters.container_dir",
+								"type": "Expression"
+							},
+							"source_directory": {
+								"value": "@pipeline().parameters.input_dir",
+								"type": "Expression"
+							},
+							"source_filename": {
+								"value": "@pipeline().parameters.filename_dir",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sink_phase2",
+						"type": "DatasetReference",
+						"parameters": {
+							"sink_system": {
+								"value": "@pipeline().parameters.container_dir",
+								"type": "Expression"
+							},
+							"sink_diectory": {
+								"value": "@pipeline().parameters.output_dir",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			},
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [
+					{
+						"activity": "unzip_phase2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "sink_phase2",
+						"type": "DatasetReference",
+						"parameters": {
+							"sink_system": {
+								"value": "@pipeline().parameters.container_dir",
+								"type": "Expression"
+							},
+							"sink_diectory": {
+								"value": "@pipeline().parameters.output_dir",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"childItems",
+						"exists",
+						"itemName",
+						"itemType",
+						"lastModified"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"container_dir": {
+				"type": "string"
+			},
+			"input_dir": {
+				"type": "string"
+			},
+			"output_dir": {
+				"type": "string"
+			},
+			"filename_dir": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
