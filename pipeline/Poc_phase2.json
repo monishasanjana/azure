@@ -111,7 +111,17 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "sink_phase2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"sink_system": {
+								"value": "@pipeline().parameters.container_dir",
+								"type": "Expression"
+							},
+							"sink_diectory": {
+								"value": "@pipeline().parameters.output_dir",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [],
 					"storeSettings": {
