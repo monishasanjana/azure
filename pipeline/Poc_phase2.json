@@ -159,7 +159,7 @@
 					},
 					"activities": [
 						{
-							"name": "Notebook1",
+							"name": "Notebook_recursivetable_create",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -189,6 +189,33 @@
 							}
 						}
 					]
+				}
+			},
+			{
+				"name": "Notebook_joinfunc",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/kavishpranav@outlook.com/phase2-poc sub"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks2",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
